@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:layout_gravity="center_horizontal"
-                    android:text="Registrar" />
+                    android:text="@string/cadastro" />
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -49,7 +49,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="email"
+                android:text="@string/email"
                 android:textColor="@color/white" />
 
             <EditText
@@ -58,7 +58,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_edit"
                 android:inputType="textEmailAddress"
-                android:hint="email_hint"
+                android:hint="@string/emailGmail"
                 android:padding="14dp"
                 android:textSize="14sp" />
 
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="password"
+                android:text="@string/senha"
                 android:textColor="@color/white" />
 
             <EditText
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_edit"
-                android:hint="email_hint"
+                android:hint="@string/emailGmail"
                 android:inputType="textEmailAddress"
                 android:padding="14dp"
                 android:textSize="14sp" />
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="password"
+                android:text="@string/senha"
                 android:textColor="@color/white" />
 
             <EditText
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/bg_edit"
-                android:hint="password_hint"
+                android:hint="@string/password"
                 android:inputType="textPassword"
                 android:padding="14dp"
                 android:textSize="14sp" />
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
                 android:background="@drawable/bg_button"
-                android:text="register_account"
+                android:text="@string/registrarConta"
                 android:textAllCaps="false"
                 android:textColor="@color/color_default"
                 app:backgroundTint="@null" />

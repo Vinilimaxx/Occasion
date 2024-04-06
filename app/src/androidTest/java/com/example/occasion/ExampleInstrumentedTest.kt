@@ -1,4 +1,4 @@
-package com.example.ocassion
+package com.example.occasion
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

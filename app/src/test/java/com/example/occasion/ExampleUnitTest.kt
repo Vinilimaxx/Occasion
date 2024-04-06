@@ -1,4 +1,4 @@
-package com.example.ocassion
+package com.example.occasion
 
 import org.junit.Test
 

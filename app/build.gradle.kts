@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.ocassion"
+    namespace = "com.example.occasion"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ocassion"
+        applicationId = "com.example.occasion"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -39,6 +40,11 @@ android {
 }
 
 dependencies {
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

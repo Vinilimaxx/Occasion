@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">Ocassion</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="criar_conta">Criar Conta</string>
+    <string name="app_name">Occasion</string>
+
+    <string name="criarConta">Criar Conta</string>
+    <string name="email">E-mail</string>
+    <string name="emailGmail">occasion@gmail.com</string>
+    <string name="senha">Senha</string>
+    <string name="password">**************</string>
+    <string name="login">Login</string>
+    <string name="esqueciSenha">Esqueci a senha</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="registrarConta">Registrar Conta</string>
+    <string name="recuperarConta">Recuperar Conta</string>
+    <string name="enviarCodigo">Enviar codigo</string>
+
 </resources>

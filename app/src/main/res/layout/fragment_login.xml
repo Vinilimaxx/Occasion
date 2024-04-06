@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="E-mail"
+            android:text="@string/email"
             android:textSize="20sp"
             android:textColor="@color/white"/>
 
@@ -25,7 +25,7 @@
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email@gmail.com"
+            android:hint="@string/emailGmail"
             android:textSize="20sp"
             android:layout_marginTop="8dp"
             android:inputType="textEmailAddress"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Senha"
+            android:text="@string/senha"
             android:textSize="20sp"
             android:textColor="@color/white"/>
 
@@ -44,7 +44,7 @@
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="**************"
+            android:hint="@string/password"
             android:textSize="20sp"
             android:layout_marginTop="8dp"
             android:inputType="textPassword"
@@ -58,7 +58,7 @@
             android:background="@drawable/bg_button"
             app:backgroundTint="@null"
             android:layout_marginTop="16dp"
-            android:text="Login"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/color_default"/>
 
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingVertical="8dp"
-                android:text="@string/criar_conta"
+                android:text="@string/criarConta"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingVertical="8dp"
-                android:text="Esqueci a senha"
+                android:text="@string/esqueciSenha"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
