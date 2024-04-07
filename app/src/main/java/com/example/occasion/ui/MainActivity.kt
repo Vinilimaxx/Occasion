@@ -1,4 +1,4 @@
-package com.example.occasion
+package com.example.occasion.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
