@@ -4,6 +4,7 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+
 android {
     namespace = "com.example.occasion"
     compileSdk = 34
@@ -40,6 +41,9 @@ android {
 }
 
 dependencies {
+
+    //materialDesing
+    implementation ("com.google.android.material:material:<1.5.0>")
 
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))

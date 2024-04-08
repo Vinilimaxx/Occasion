@@ -39,6 +39,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun initClicks() {
+
+        binding.btnLogin.setOnClickListener{validateData()}
+
         binding.btnRegister.setOnClickListener(){
             findNavController().navigate(R.id.registerFragment)
         }
@@ -72,6 +75,7 @@ class LoginFragment : Fragment() {
                     findNavController().navigate(R.id.homeFragment)
                 } else {
                     binding.progressBar.isVisible = false
+                    Toast.makeText(requireContext(), "Email ou senha incorreta", Toast.LENGTH_SHORT).show()
                 }
             }
     }
