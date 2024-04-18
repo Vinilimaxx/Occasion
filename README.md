@@ -1,11 +1,11 @@
 # Projeto- OCCASION
 
 # Grupo-OCCASION
-- Andre Felipe
+- André Felipe Bezerra da Silva
 - Natan Marques Monteiro Cavalcanti
-- Thais
-- Nicolas 
-- Luiz
+- Thais Silveira
+- Nicolas Sá Simões 
+- Luiz Henrique
 - Vinicius Rodrigues de Lima
 
 # figma
