@@ -51,18 +51,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/email"
-                android:textColor="@color/white" />
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
 
-            <EditText
-                android:id="@+id/edtEmail"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_edit"
-                android:inputType="textEmailAddress"
                 android:hint="@string/emailGmail"
-                android:padding="14dp"
-                android:textSize="14sp" />
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btnSend"

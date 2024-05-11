@@ -51,8 +51,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun validateData(){
-        val email = binding.edtEmail.text.toString().trim()
-        val password = binding.edtPassword.text.toString().trim()
+        val email = binding.edtEmail.text.toString()
+//        val password = binding.edtPasswordText.text.toString().trim()
+        val password = binding.edtPassword.text.toString()
 
         if (email.isNotEmpty()){
             if (password.isNotEmpty()){
