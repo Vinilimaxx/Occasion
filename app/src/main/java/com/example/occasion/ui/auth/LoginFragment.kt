@@ -73,7 +73,7 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.homeFragment)
+                    findNavController().navigate(R.id.menu_home)
                 } else {
                     binding.progressBar.isVisible = false
                     Toast.makeText(requireContext(), "Email ou senha incorreta", Toast.LENGTH_SHORT).show()
