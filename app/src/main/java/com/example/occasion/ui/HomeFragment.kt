@@ -31,8 +31,9 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun configBarLayout(){
-        val adapter = viewPagerAdapter(requireActivity())
-    }
+
+//    private fun configBarLayout(){
+//        val adapter = viewPagerAdapter(requireActivity())
+//    }
 }
 

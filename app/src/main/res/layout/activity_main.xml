@@ -20,6 +20,21 @@
         app:navGraph="@navigation/main_grap" />
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnv"
+        android:layout_width="414dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main"
+
+
+        />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
