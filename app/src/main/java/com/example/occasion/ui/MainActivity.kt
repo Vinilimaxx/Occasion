@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
 
-
+    
         iniNavigation()
     }
 
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
+                R.id.splashFragment -> binding.btnv.visibility = View.GONE
                 R.id.loginFragment -> binding.btnv.visibility = View.GONE
                 R.id.registerFragment -> binding.btnv.visibility = View.GONE
                 else -> binding.btnv.visibility = View.VISIBLE

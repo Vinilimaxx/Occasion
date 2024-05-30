@@ -30,10 +30,5 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-
-
-//    private fun configBarLayout(){
-//        val adapter = viewPagerAdapter(requireActivity())
-//    }
 }
 
