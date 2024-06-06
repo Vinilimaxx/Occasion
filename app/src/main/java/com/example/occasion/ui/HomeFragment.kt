@@ -14,12 +14,14 @@ import com.example.occasion.R
 import com.example.occasion.databinding.ActivityMainBinding
 import com.example.occasion.databinding.FragmentHomeBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class HomeFragment : Fragment() {
 
     private var _binding:FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +31,23 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        auth = Firebase.auth
+
+
+
+        initClicks()
+    }
+
+    private fun initClicks() {
+
+    }
+
+
 
 }
 
