@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_menu_explorer_to_createCommunityFragment"
             app:destination="@id/createCommunityFragment" />
+        <action
+            android:id="@+id/action_menu_explorer_to_menu_home"
+            app:destination="@id/menu_home" />
     </fragment>
     <fragment
         android:id="@+id/menu_add"
