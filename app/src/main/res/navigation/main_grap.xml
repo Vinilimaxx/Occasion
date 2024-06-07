@@ -69,7 +69,14 @@
         android:id="@+id/menu_explorer"
         android:name="com.example.occasion.ui.ExplorerFragment"
         android:label="fragment_explorer"
-        tools:layout="@layout/fragment_explorer" />
+        tools:layout="@layout/fragment_explorer" >
+        <action
+            android:id="@+id/action_menu_explorer_to_createCommunityFragment"
+            app:destination="@id/createCommunityFragment" />
+        <action
+            android:id="@+id/action_menu_explorer_to_menu_home"
+            app:destination="@id/menu_home" />
+    </fragment>
     <fragment
         android:id="@+id/menu_add"
         android:name="com.example.occasion.ui.AddFragment"
@@ -80,4 +87,9 @@
         android:name="com.example.occasion.ui.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/createCommunityFragment"
+        android:name="com.example.occasion.ui.CreateCommunityFragment"
+        android:label="fragment_create_community"
+        tools:layout="@layout/fragment_create_community" />
 </navigation>

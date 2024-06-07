@@ -45,6 +45,7 @@ class LoginFragment : Fragment() {
         binding.btnRegister.setOnClickListener(){
             findNavController().navigate(R.id.registerFragment)
         }
+
         binding.btnRecover.setOnClickListener(){
             findNavController().navigate(R.id.recoverFragment)
         }
