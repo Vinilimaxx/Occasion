@@ -65,7 +65,7 @@
 <!--                tools:layout_editor_absoluteY="107dp" />-->
 
             <Button
-                android:id="@+id/filledButtonPhoto"
+                android:id="@+id/btnPhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="56dp"
@@ -76,7 +76,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/filledButtonCancel"
+                android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="56dp"
@@ -87,7 +87,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/filledButtonPost"
+                android:id="@+id/btnPost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="180dp"
