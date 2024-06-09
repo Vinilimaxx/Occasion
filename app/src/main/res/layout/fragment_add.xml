@@ -18,8 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_default"
-            >
+            android:background="@color/color_default">
 
             <TextView
                 android:id="@+id/textToolbar"
@@ -49,20 +48,6 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-
-            <!--            <Button-->
-<!--                android:id="@+id/btnSave"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/bg_button"-->
-<!--                android:text="Publicar"-->
-<!--                android:textAllCaps="false"-->
-<!--                android:textColor="@color/color_default"-->
-<!--                app:backgroundTint="@null"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="0.0"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                tools:layout_editor_absoluteY="107dp" />-->
 
             <Button
                 android:id="@+id/btnPhoto"

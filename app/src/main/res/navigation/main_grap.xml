@@ -83,7 +83,7 @@
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" >
         <action
-            android:id="@+id/action_menu_add_to_menu_home"
+            android:id="@+id/action_menu_add_to_menu_home2"
             app:destination="@id/menu_home" />
     </fragment>
     <fragment
