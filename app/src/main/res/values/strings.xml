@@ -13,5 +13,11 @@
     <string name="recuperarConta">Recuperar Conta</string>
     <string name="enviarCodigo">Enviar codigo</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="account_not_registered_register_fragment">account_not_registered_register_fragment</string>
+    <string name="invalid_email_register_fragment">invalid_email_register_fragment</string>
+    <string name="invalid_password_register_fragment">invalid_password_register_fragment</string>
+    <string name="email_in_use_register_fragment">email_in_use_register_fragment</string>
+    <string name="strong_password_register_fragment">strong_password_register_fragment</string>
+    <string name="error_generic">error_generic</string>
 
 </resources>

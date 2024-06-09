@@ -5,4 +5,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bottomBar">#0047FF</color>
+    <color name="gray">#3D4354</color>
+    <color name="red">#CD0000</color>
+
 </resources>
