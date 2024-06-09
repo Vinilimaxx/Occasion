@@ -10,38 +10,16 @@
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
-            android:id="@+id/action_splashFragment2_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.occasion.ui.auth.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment2_to_recoverAccountFragment"
-            app:destination="@id/recoverFragment" />
-        <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.occasion.ui.auth.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
+            android:id="@+id/action_splashFragment_to_menu_home"
             app:destination="@id/menu_home"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"
-            />
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_authentication"
+            app:destination="@id/authentication"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
-    <fragment
-        android:id="@+id/recoverFragment"
-        android:name="com.example.occasion.ui.auth.RecoverAccountFragment"
-        android:label="fragment_recover_account"
-        tools:layout="@layout/fragment_recover_account" />
     <fragment
         android:id="@+id/menu_home"
         android:name="com.example.occasion.ui.HomeFragment"
@@ -96,4 +74,34 @@
         android:name="com.example.occasion.ui.CreateCommunityFragment"
         android:label="fragment_create_community"
         tools:layout="@layout/fragment_create_community" />
+    <navigation android:id="@+id/authentication"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.example.occasion.ui.auth.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" >
+            <action
+                android:id="@+id/action_loginFragment_to_recoverFragment"
+                app:destination="@id/recoverFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/recoverFragment"
+            android:name="com.example.occasion.ui.auth.RecoverAccountFragment"
+            android:label="fragment_recover_account"
+            tools:layout="@layout/fragment_recover_account" />
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.example.occasion.ui.auth.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register" />
+        <action
+            android:id="@+id/action_global_menu_home"
+            app:destination="@id/menu_home"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </navigation>
 </navigation>

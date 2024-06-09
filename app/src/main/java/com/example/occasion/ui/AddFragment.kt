@@ -36,7 +36,7 @@ class AddFragment : Fragment() {
 
     private fun initClick() {
         binding.btnCancel.setOnClickListener {
-            findNavController().navigate(R.id.menu_home)
+            findNavController().popBackStack()
         }
 
         binding.btnPost.setOnClickListener {
@@ -60,7 +60,7 @@ class AddFragment : Fragment() {
                 if (task.isSuccessful) {
                     Log.d(TAG, "Post successful")
                     Toast.makeText(context, "Postado com sucesso", Toast.LENGTH_SHORT).show()
-                    findNavController().navigate(R.id.menu_home)
+                    findNavController().popBackStack()
                 } else {
                     Log.e(TAG, "Post failed", task.exception)
                     Toast.makeText(context, "Falha ao postar", Toast.LENGTH_SHORT).show()
