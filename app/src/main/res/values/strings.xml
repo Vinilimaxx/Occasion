@@ -13,5 +13,10 @@
     <string name="recuperarConta">Recuperar Conta</string>
     <string name="enviarCodigo">Enviar codigo</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comunidade">Comunidade</string>
+    <string name="dgtcomunindade">Digite o nome da sua comunidade</string>
+    <string name="cria">Criar</string>
+    <string name="evnt">Descrição</string>
+    <string name="dgtdesc">Descrição da comunidade</string>
 
 </resources>
