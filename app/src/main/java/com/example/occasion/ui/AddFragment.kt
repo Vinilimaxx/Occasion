@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.occasion.R
 import com.example.occasion.databinding.FragmentAddBinding
 import com.example.occasion.databinding.FragmentHomeBinding
@@ -24,10 +25,26 @@ class AddFragment : Fragment() {
         _binding = FragmentAddBinding.inflate(inflater, container,false)
         return  binding.root
     }
+
+    private fun initClick(){
+        binding.btnCancel.setOnClickListener(){
+            findNavController().navigate(R.id.menu_home)
+        }
+
+        binding.btnPost.setOnClickListener(){
+            findNavController().navigate(R.id.menu_home)
+        }
+
+    }
+
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
 
 }
