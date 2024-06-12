@@ -40,12 +40,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/caixa1"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:textColor="@color/white"
-                />
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,6 +98,18 @@
             android:layout_gravity="center"
             tools:visibility="visible" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btnv"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="210dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_main"
+
+
+            />
+
     </LinearLayout>
+
 
 </ScrollView>
