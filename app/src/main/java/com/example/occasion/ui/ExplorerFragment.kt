@@ -19,3 +19,27 @@ class ExplorerFragment : Fragment() {
     }
 
 }
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_selected="true" android:drawable="@drawable/tab_button_selected_background"/>
+<item android:drawable="@drawable/tab_button_default_background"/>
+</selector>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="#FFFFFF"/>
+<corners android:radius="16dp"/>
+</shape>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="#333333"/>
+<corners android:radius="16dp"/>
+</shape>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="#333333"/>
+<corners android:radius="8dp"/>
+</shape>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="#333333"/>
+<corners android:radius="8dp"/>
+</shape>
