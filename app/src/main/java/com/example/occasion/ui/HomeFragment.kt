@@ -9,7 +9,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.occasion.databinding.FragmentHomeBinding
 import com.example.occasion.model.Occasion
 import com.example.occasion.ui.adapter.TextAdapter
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HomeFragment : Fragment() {
 
@@ -32,34 +36,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView()
-        fetchPosts()
-
-        // Adiciona um listener para escutar novas mensagens adicionadas
-        database.addChildEventListener(object : ChildEventListener {
-            override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                val post = snapshot.getValue(Occasion::class.java)
-                post?.let {
-                    occasionList.add(it)
-                    textAdapter.notifyDataSetChanged()
-                }
-            }
-
-            override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
-                // Não é necessário implementar, pois estamos interessados apenas em novas mensagens
-            }
-
-            override fun onChildRemoved(snapshot: DataSnapshot) {
-                // Não é necessário implementar, pois estamos interessados apenas em novas mensagens
-            }
-
-            override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-                // Não é necessário implementar, pois estamos interessados apenas em novas mensagens
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Handle possible errors.
-            }
-        })
+        loadDataFromFirebase()
     }
 
     private fun setupRecyclerView() {
@@ -70,21 +47,18 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun fetchPosts() {
-        database.addListenerForSingleValueEvent(object : ValueEventListener {
+    private fun loadDataFromFirebase() {
+        database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 occasionList.clear()
                 for (postSnapshot in snapshot.children) {
                     val post = postSnapshot.getValue(Occasion::class.java)
-                    post?.let {
-                        occasionList.add(it)
-                    }
+                    post?.let { occasionList.add(it) }
                 }
                 textAdapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Handle possible errors.
             }
         })
     }
