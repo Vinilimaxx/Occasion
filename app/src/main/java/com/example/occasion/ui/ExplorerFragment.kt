@@ -34,29 +34,25 @@ class ExplorerFragment : Fragment() {
         chipCommunityGroup = view.findViewById(R.id.chip_community_group)
         chipInterestsGroup = view.findViewById(R.id.chip_interests_group)
 
-        // Configuração dos listeners de clique
         createCommunityButton.setOnClickListener {
             // Manipula o clique no botão "Crie sua comunidade"
             Toast.makeText(requireContext(), "Botão Criar Comunidade Clicado", Toast.LENGTH_SHORT).show()
-            // Adicione sua lógica aqui para navegar ou realizar uma ação
         }
 
         seeLessButton.setOnClickListener {
             // Manipula o clique no botão "Ver Menos"
             Toast.makeText(requireContext(), "Botão Ver Menos Clicado", Toast.LENGTH_SHORT).show()
-            // Adicione sua lógica aqui para mostrar menos conteúdo ou realizar uma ação
         }
 
-        // Listener para alteração de seleção no grupo de chips de comunidade
+        // alteração de seleção no grupo de chips de comunidade
         chipCommunityGroup.setOnCheckedChangeListener { group, checkedId ->
             val chip = group.findViewById<Chip>(checkedId)
             chip?.let {
                 Toast.makeText(requireContext(), "Comunidade Selecionada: ${it.text}", Toast.LENGTH_SHORT).show()
-                // Adicione sua lógica aqui para lidar com a mudança de seleção
             }
         }
 
-        // Listener para alteração de seleção no grupo de chips de interesses
+        //alteração de seleção no grupo de chips de interesses
         chipInterestsGroup.setOnCheckedChangeListener { group, checkedId ->
             val chip = group.findViewById<Chip>(checkedId)
             chip?.let {
