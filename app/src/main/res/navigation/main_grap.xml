@@ -49,9 +49,6 @@
         android:label="fragment_explorer"
         tools:layout="@layout/fragment_explorer" >
         <action
-            android:id="@+id/action_menu_explorer_to_createCommunityFragment"
-            app:destination="@id/createCommunityFragment" />
-        <action
             android:id="@+id/action_menu_explorer_to_menu_home"
             app:destination="@id/menu_home" />
     </fragment>
@@ -63,6 +60,10 @@
         <action
             android:id="@+id/action_menu_add_to_menu_home2"
             app:destination="@id/menu_home" />
+        <action
+            android:id="@+id/action_menu_add_to_createCommunityFragment"
+            app:destination="@id/createCommunityFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/menu_message"
@@ -73,7 +74,12 @@
         android:id="@+id/createCommunityFragment"
         android:name="com.example.occasion.ui.CreateCommunityFragment"
         android:label="fragment_create_community"
-        tools:layout="@layout/fragment_create_community" />
+        tools:layout="@layout/fragment_create_community" >
+        <action
+            android:id="@+id/action_createCommunityFragment_to_menu_explorer"
+            app:destination="@id/menu_explorer" />
+    </fragment>
+
     <navigation android:id="@+id/authentication"
         app:startDestination="@id/loginFragment">
         <fragment
