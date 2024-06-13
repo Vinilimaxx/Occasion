@@ -96,7 +96,7 @@
             android:indeterminateTint="@color/white"
             android:visibility="invisible"
             android:layout_gravity="center"
-            tools:visibility="visible" />
+            tools:visibility="gone" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/btnv"
