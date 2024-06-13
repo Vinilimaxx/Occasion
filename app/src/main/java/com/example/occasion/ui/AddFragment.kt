@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.occasion.R
+
 import com.example.occasion.databinding.FragmentAddBinding
 import com.example.occasion.model.Occasion
 import com.google.firebase.database.DatabaseReference

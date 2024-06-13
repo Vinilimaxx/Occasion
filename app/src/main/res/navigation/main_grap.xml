@@ -63,6 +63,7 @@
         <action
             android:id="@+id/action_menu_add_to_createCommunityFragment"
             app:destination="@id/createCommunityFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/menu_message"
