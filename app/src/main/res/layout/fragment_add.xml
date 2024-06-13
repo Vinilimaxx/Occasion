@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|left"
                 android:text="@string/app_name"
+                android:elevation="20dp"
                 android:textColor="@color/white" />
 
         </androidx.appcompat.widget.Toolbar>
@@ -57,6 +58,8 @@
                 android:text="Adicionar foto"
                 app:layout_constraintBottom_toTopOf="@+id/input_layout"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/color_default"
+                app:backgroundTint="@color/white"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -64,10 +67,25 @@
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="56dp"
+                android:layout_marginTop="52dp"
                 android:text="Cancelar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/color_default"
+                app:backgroundTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout" />
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criar comunidade"
+                android:layout_marginBottom="56dp"
                 app:layout_constraintBottom_toTopOf="@+id/input_layout"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/color_default"
+                app:backgroundTint="@color/white"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -80,6 +98,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/color_default"
+                app:backgroundTint="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/input_layout" />
 
             <ProgressBar
