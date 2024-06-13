@@ -1,14 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ExplorerFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#090909"
+    android:paddingHorizontal="20dp">
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        app:checkedButton="@id/community_btn">
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/community_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comunidade"
+            />
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/discover_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descobrir"
+            android:textColor="#F2F2F2"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <Button
+        android:id="@+id/create_community_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        app:backgroundTint="@null"
+        android:layout_marginTop="16dp"
+        android:text="Crie sua comunidade"
+        android:textAllCaps="false"
+        android:textColor="@color/color_default"
+        app:layout_constraintTop_toBottomOf="@id/toggle_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_community_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:checkedChip="@id/chip_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_community_btn"
+        app:singleSelection="false">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_1"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Fitness"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_2"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Teste MBTI"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_3"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Signo"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_4"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Pets"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_5"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Formação"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_6"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Gym"
+            app:checkedIconVisible="false"
+            app:chipIconVisible="true" />
+
+    </com.google.android.material.chip.ChipGroup>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="explorer occasion" />
+        android:id="@+id/interest_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interesses"
+        android:textSize="20dp"
+        android:textColor="#F2F2F2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_community_group"
+        android:layout_marginTop="16dp"
+        />
 
-</FrameLayout>
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_interests_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/interest_label"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:checkedChip="@id/chip_1"
+        app:singleSelection="false"
+        >
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_1"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            android:checkable="true"
+            android:text="Ciclismo"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_2"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Corrida"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_3"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Alimentação"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_4"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Natação"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_5"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Atvidades ao ar livre"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/interest_6"
+            app:chipIconVisible="true"
+            app:checkedIconVisible="false"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Academia"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/see_less_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        app:backgroundTint="@null"
+        android:layout_marginTop="24dp"
+        android:text="Ver mais"
+        android:textAllCaps="false"
+        android:textColor="@color/color_default"
+        app:layout_constraintTop_toBottomOf="@id/chip_interests_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
