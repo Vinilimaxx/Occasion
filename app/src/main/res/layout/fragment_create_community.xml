@@ -39,7 +39,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/caixa1"
+                android:id="@+id/community_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -68,7 +68,7 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/caixa2"
+                android:id="@+id/community_description"
                 android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

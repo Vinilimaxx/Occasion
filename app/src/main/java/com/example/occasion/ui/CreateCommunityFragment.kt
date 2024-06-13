@@ -1,60 +1,71 @@
 package com.example.occasion.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.occasion.R
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.occasion.databinding.FragmentCreateCommunityBinding
+import com.example.occasion.model.Community
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CreateCommunityFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CreateCommunityFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var database: DatabaseReference
+    private var _binding: FragmentCreateCommunityBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_create_community, container, false)
+        _binding = FragmentCreateCommunityBinding.inflate(inflater, container, false)
+        database = Firebase.database.reference
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CreateCommunityFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CreateCommunityFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btncomunty.setOnClickListener {
+            val name = binding.communityName.text.toString()
+            val description = binding.communityDescription.text.toString()
+            postCommunityToFirebase(name, description)
+        }
+    }
+
+    private fun postCommunityToFirebase(communityName: String, communityDescription: String) {
+//        binding.progressBar.visibility = View.VISIBLE
+
+        val communityId = database.child("communities").push().key
+        Toast.makeText(context, "$communityId", Toast.LENGTH_SHORT).show()
+        val communities = Community(id = communityId, description = communityDescription, name = communityName)
+
+        if (communityId != null) {
+            database.child("communities").child(communityId).setValue(communities).addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+//                    Log.d(AddFragment.TAG, "Post successful")
+                    Toast.makeText(context, "Postado com sucesso", Toast.LENGTH_SHORT).show()
+                    findNavController().popBackStack()
+                } else {
+//                    Log.e(AddFragment.TAG, "Post failed", task.exception)
+                    Toast.makeText(context, "Falha ao postar", Toast.LENGTH_SHORT).show()
                 }
+                binding.progressBar.visibility = View.INVISIBLE
             }
+        } else {
+//            Log.e(AddFragment.TAG, "Erro ao gerar ID do post")
+            Toast.makeText(context, "Erro ao gerar ID do post", Toast.LENGTH_SHORT).show()
+            binding.progressBar.visibility = View.INVISIBLE
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
