@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Occasion</string>
+
+    <string name="criarConta">Criar Conta</string>
+    <string name="email">E-mail</string>
+    <string name="emailGmail">occasion@gmail.com</string>
+    <string name="senha">Senha</string>
+    <string name="password">**************</string>
+    <string name="login">Login</string>
+    <string name="esqueciSenha">Esqueci a senha</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="registrarConta">Registrar Conta</string>
+    <string name="recuperarConta">Recuperar Conta</string>
+    <string name="enviarCodigo">Enviar codigo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
