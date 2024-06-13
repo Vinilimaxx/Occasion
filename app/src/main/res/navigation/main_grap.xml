@@ -49,6 +49,11 @@
         android:label="fragment_explorer"
         tools:layout="@layout/fragment_explorer" >
         <action
+
+            android:id="@+id/action_menu_explorer_to_createCommunityFragment"
+            app:destination="@id/createCommunityFragment" />
+        <action
+
             android:id="@+id/action_menu_explorer_to_menu_home"
             app:destination="@id/menu_home" />
     </fragment>
@@ -79,6 +84,10 @@
             android:id="@+id/action_createCommunityFragment_to_menu_explorer"
             app:destination="@id/menu_explorer" />
     </fragment>
+
+
+        tools:layout="@layout/fragment_create_community" />
+
 
     <navigation android:id="@+id/authentication"
         app:startDestination="@id/loginFragment">
