@@ -52,10 +52,10 @@
         android:id="@+id/chip_community_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         app:checkedChip="@id/chip_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/create_community_btn"
         app:singleSelection="false">
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Signo"
+            android:text="Fitness"
             app:checkedIconVisible="false"
             app:chipIconVisible="true" />
 
@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Alimentação"
+            android:text="Signo"
             app:checkedIconVisible="false"
             app:chipIconVisible="true" />
 
@@ -153,7 +153,7 @@
             app:chipIconVisible="true"
             app:checkedIconVisible="false"
             android:checkable="true"
-            android:text="Signo"/>
+            android:text="Ciclismo"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/interest_2"
             app:chipIconVisible="true"
@@ -162,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Teste MBTI"/>
+            android:text="Corrida"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/interest_3"
             app:chipIconVisible="true"
@@ -180,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Pets"/>
+            android:text="Natação"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/interest_5"
@@ -190,7 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
-            android:text="Formação"/>
+            android:text="Atvidades ao ar livre"/>
         <com.google.android.material.chip.Chip
             android:id="@+id/interest_6"
             app:chipIconVisible="true"
