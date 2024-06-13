@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/recuperarConta"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/white" />
 
             </androidx.appcompat.widget.Toolbar>
 

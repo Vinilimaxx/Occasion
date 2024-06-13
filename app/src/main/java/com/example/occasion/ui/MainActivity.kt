@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.splashFragment -> binding.btnv.visibility = View.GONE
                 R.id.loginFragment -> binding.btnv.visibility = View.GONE
                 R.id.registerFragment -> binding.btnv.visibility = View.GONE
+                R.id.recoverFragment -> binding.btnv.visibility = View.GONE
                 else -> binding.btnv.visibility = View.VISIBLE
             }
         }
