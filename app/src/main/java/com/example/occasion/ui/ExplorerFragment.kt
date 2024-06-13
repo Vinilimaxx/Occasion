@@ -61,7 +61,6 @@ class ExplorerFragment : Fragment() {
             val chip = group.findViewById<Chip>(checkedId)
             chip?.let {
                 Toast.makeText(requireContext(), "Interesse Selecionado: ${it.text}", Toast.LENGTH_SHORT).show()
-                // Adicione sua lógica aqui para lidar com a mudança de seleção
             }
         }
 
